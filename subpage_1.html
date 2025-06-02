@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+<title>나만의 보드</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .jua-regular {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .nanum-gothic-coding-regular {
+        font-family: "Nanum Gothic Coding", monospace;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header img {
+        width:15px;
+        height:15px
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 15px;
+        font-style:italic;
+    }
+
+    .topnav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .topnav ul li {
+        position: relative;
+        display: inline-block;
+    }
+
+    .topnav ul li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .topnav ul li ul {
+        display:none;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        top: 100%;
+        background: #f0f0f0;
+        padding: 0;
+        margin: 0;
+        min-width: 150px;
+    }
+
+    .topnav ul li:hover > ul {
+      display: block;
+    }
+
+    .topnav ul li ul li {
+        display: block;
+    }
+
+    .topnav ul li ul li a {
+        padding: 10px;
+        display: block;
+        text-decoration: underline;
+        color: #333;
+    }
+
+    .topnav ul li ul li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:visited {
+        text-decoration:underline;
+        color: black;
+    }
+
+    .topnav a:hover {
+        background-color: #f3f3f3;
+        border-radius: 10%;
+        text-decoration:underline;
+        color: black;
+    }
+
+    .topnav a:active {
+        text-decoration:underline;
+        color: black;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .card p {
+      padding: 10px;
+    }
+    
+    .card1 {
+        font-size: 14px;
+        border-bottom-right-radius: 5%;
+        border-top-left-radius: 5%;
+        padding: 20px;
+        margin-top: 20px;
+        background-color:rgb(247, 246, 246);
+        text-align: center;
+        line-height: 24px;
+    }
+
+    @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {
+            width: 100%;
+            padding: 0; 
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+    }
+
+</style>
+</head>
+<body class="jua-regular">
+    <div class="header">
+        <h1>나만의 보드</h1>
+        <p>'나만의 보드'의 오신걸 환영합니다~~ <img src="./img/smile.png"></p>
+    </div>
+
+    <div class="topnav">
+        <ul>
+            <li><a href="index.html">'나만의 보드'란?</a></li>
+            <li><a href="subpage_2.html">요즈음 밈</a>
+                <ul>
+                    <li><a href="#">드라마&영화</a></li>
+                    <li><a href="#">예능&유투브</a></li>
+                </ul>
+            </li>
+            <li><a href="subpage_3.html">요즈음 트렌드</a></li>
+            <li><a href="subpage_4.html">요즈음 사전</a></li>
+            <li><a href="subpage_5.html">'나만의 보드'</a>
+                <ul>
+                    <li><a href="subpage_5_1.html">내 단어 모음zip</a></li>
+                    <li><a href="subpage_5_2.html">내 감성 모음zip</a></li>
+                </ul>
+            </li>
+        </ul>    
+    </div>
+
+    
+    <div class="card1">
+        <div class="nanum-gothic-coding-regular">
+            <p>'나만의 보드'란 요즘 유행하는 컨텐츠를 한번에 접할 수 있는 사이트이다. <br>
+            각종 온라인 커뮤니티, 소셜 미디어 등에서 유행하는 사진,영상 등을 접하고 나만의 '밈'도 만들어 올릴 수 있는 사이트이다. <br>
+            새로운, '핫'한 트렌드, 정보 또한 얻어 유익함을 얻게 해주는 사이트이다.
+            </p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="grid">
+        <div class="card"><img src="./img/image12.jpeg"></div>
+        <div class="card"><img src="./img/image16.jpeg"></div>
+        <div class="card"><img src="./img/image17.jpeg"></div>
+        <div class="card"><img src="./img/image20.jpeg"></div>
+        <div class="card"><img src="./img/image27.jpeg"></div>
+        <div class="card"><img src="./img/image29.jpeg"></div>
+        <div class="card"><img src="./img/image30.jpeg"></div>
+        <div class="card"><img src="./img/image31.jpeg"></div>
+        <div class="card"><img src="./img/image32.png"></div>
+        <div class="card"><img src="./img/image37.png"></div>
+    </div>
+
+</body>
+</html>

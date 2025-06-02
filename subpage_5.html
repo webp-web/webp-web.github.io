@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <title>요즈음 사전</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .jua-regular {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header img {
+        width:15px;
+        height:15px
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 15px;
+        font-style:italic;
+    }
+
+    .topnav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .topnav ul li {
+        position: relative;
+        display: inline-block;
+    }
+
+    .topnav ul li a {
+        display: inline-block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .topnav ul li ul {
+        display:none;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        top: 100%;
+        background: #f0f0f0;
+        padding: 0;
+        margin: 0;
+        min-width: 150px;
+    }
+
+    .topnav ul li:hover > ul {
+      display: block;
+    }
+
+    .topnav ul li ul li {
+        display: block;
+    }
+
+    .topnav ul li ul li a {
+        padding: 10px;
+        display: block;
+        text-decoration: underline;
+        color: #333;
+    }
+
+    .topnav ul li ul li a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:visited {
+        text-decoration:underline;
+        color: black;
+    }
+
+    .topnav a:hover {
+        background-color: #f3f3f3;
+        border-radius: 10%;
+        text-decoration:underline;
+        color: black;
+    }
+
+    .topnav a:active {
+        text-decoration:underline;
+        color: black;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .submit-btn {
+      margin-top: 30px;
+      padding: 12px;
+      background-color: #e60023;
+      color: white;
+      border: none;
+      border-radius: 24px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #c2001d;
+    }
+
+    @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {
+            width: 100%;
+            padding: 0; 
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body class="jua-regular">
+    <div class="header">
+        <h1>나만의 보드</h1>
+        <p>'나만의 보드'의 오신걸 환영합니다~~ <img src="./img/smile.png"></p>
+    </div>
+
+    <div class="topnav">
+        <ul>
+            <li><a href="index.html">'나만의 보드'란?</a></li>
+            <li><a href="subpage_2.html">요즈음 밈</a>
+                <ul>
+                    <li><a href="#">드라마&영화</a></li>
+                    <li><a href="#">예능&유투브</a></li>
+                </ul>
+            </li>
+            <li><a href="subpage_3.html">요즈음 트렌드</a></li>
+            <li><a href="subpage_4.html">요즈음 사전</a></li>
+            <li><a href="subpage_5.html">'나만의 보드'</a>
+                <ul>
+                    <li><a href="subpage_5_1.html">내 단어 모음zip</a></li>
+                    <li><a href="subpage_5_2.html">내 감성 모음zip</a></li>
+                </ul>
+            </li>
+        </ul>    
+    </div>
+
+<br><br>
+
+  <div class="container">
+    <h2>나의 보드 만들기기</h2>
+    <form method="post" enctype="multipart/form-data">
+      <label for="title">제목</label>
+      <input type="text" id="title" name="title" placeholder="정의하는 단어를 입력하시오.." required>
+
+      <label for="description">설명</label>
+      <textarea id="description" name="description" placeholder="뜻/설명을 입력하시오..." required></textarea>
+
+      <label for="image">나의 '감성' 사진 첨부하기</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <button type="submit" class="submit-btn">기록하기</button>
+    </form>
+  </div>
+</body>
+</html>
